@@ -1,1 +1,40 @@
-<p>numbers-page works!</p>
+<section class="container">
+  <p-panel header="Pipes numéricos" class="p-1">
+    <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+  </p-panel>
+
+  <div class="grid">
+    <div class="col-12 md:col-6">
+      <p-card header="DecimalPipe" subheader="Formatea un valor según las opciones de dígitos y las reglas locales">
+        <div class="d-flex justify-content-between align-items-center">
+          <p>2567789.5567 | number:'1.2-2'</p>
+          {{ totalSells + 1235 | number : "1.2-2" }}
+        </div>
+      </p-card>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-card
+        header="Currency Pipe"
+        subheader="Transforma un número en una cadena de moneda"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <p>2567789.5567 | currency:'HNL':'symbol-narrow':'1.4-4'</p>
+          {{ totalSells | currency : "EUR" : "symbol-narrow" : "1.4-4" }}
+        </div>
+      </p-card>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-card
+        header="PercentPipe"
+        subheader="Transforma un número en una cadena de porcentaje"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <p>0.4856 | percent: '1.2-2'</p>
+          {{ percent | percent : "1.2-2" }}
+        </div>
+      </p-card>
+    </div>
+  </div>
+</section>
