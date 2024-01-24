@@ -8,6 +8,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     MenubarModule,
     PanelModule,
     TableModule,
-    ToolbarModule,
+    ToolbarModule,TooltipModule
   ],
 })
 export class PrimeNgModule { }

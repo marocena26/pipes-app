@@ -8,13 +8,22 @@ import { OrderComponent } from './pages/order/order.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
+import { SortByPipe } from './pipes/sort-by.pipe';
+import { CanFlyPipe } from './pipes/can-fly.pipe';
+import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { ColorCasePipe } from './pipes/color-case.pipe';
+
 @NgModule({
   declarations: [
     BasicsPageComponent,
     NumbersPageComponent,
     OrderComponent,
     UncommonPageComponent,
+    // Pipes
+    CanFlyPipe,
+    ToggleCasePipe,
+    SortByPipe,
   ],
-  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
+  imports: [CommonModule, ProductsRoutingModule, PrimeNgModule, ColorCasePipe],
 })
 export class ProductsModule {}
