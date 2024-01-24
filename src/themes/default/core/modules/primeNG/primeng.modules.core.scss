@@ -1,0 +1,28 @@
+@import "../../../../variables.scss";
+
+@mixin primeng-modules() {
+  // -------    ButtonModule   -------
+
+  .p-menubar ul {
+   margin-bottom: 0;
+}
+
+  .p-menubar
+    .p-menubar-root-list
+    > .p-menuitem
+    > .p-menuitem-content
+    .p-menuitem-link {
+    text-decoration: none;
+  }
+  .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link {
+    text-decoration: none;
+
+    .p-menubar .p-menuitem-link {
+      text-decoration: none;
+    }
+  }
+  .p-menubar .p-submenu-list {
+    padding: 12px 0;
+
+}
+}
