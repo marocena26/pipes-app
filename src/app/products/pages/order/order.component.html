@@ -1,40 +1,53 @@
 <section class="container">
-  <p-panel header="Pipes personalizados" class="p-1">
-    <p>Pipes personalizados</p>
-  </p-panel>
+  <div class="header">
+    <h2>Personalized Pipe</h2>
+    <p>Pipes created by ourselves</p>
+  </div>
 
   <div class="grid">
-    <div class="col-12 md:col-6">
-      <p-card
-        header="toggleCase"
-        subheader="Transforma un texto de minúscula a mayúscula y viceversa"
-      >
-        <div class="d-flex justify-content-between align-items-center">
-          <p>¡Mira cómo cambia! | toggleCase : isUpperCase</p>
-          {{ "¡Mira cómo cambia!" | toggleCase : isUpperCase }}
-        </div>
-        <div class="p-toolbar-group-start" style="margin-top: 20px">
-          <p-button
-            label="ToogleCase"
-            icon="pi pi-refresh"
-            (click)="toggleUpperCase()"
-            pTooltip="¡Prueba el toggle!"
-          ></p-button>
-        </div>
-      </p-card>
+    <div class="col-12 md:col-4">
+      <h3>toggleCase</h3>
+      <p>Transform a text from lowercase to uppercase and vice versa.</p>
+      <p-button
+        label="ToggleCase"
+        icon="pi pi-refresh"
+        (click)="toggleUpperCase()"
+        pTooltip="Try to toggle!"
+      ></p-button>
     </div>
 
-    <div class="col-12 md:col-6">
-      <p-card header="Code" subheader="¿Cómo funciona toggleCase?">
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
         <div>
-          <pre><code>
-            transform(value: string, toUpper: boolean = false): string &#123;
-              return ({{ 'toUpper' }})
-                ? value.toUpperCase()
-                : value.toLowerCase();
-            &#125;
-          </code></pre>
+          <code class="lenguage-typescript">
+            &#123;&#123; value_expression | toggleCase : isUpperCase &#125;<span
+            ></span>&#125;
+          </code>
         </div>
+
+        <hr />
+        <div class="d-flex justify-content-between align-items-center">
+          <code
+            ><span class="expression">toggleCase</span>
+            <span style="color: black"> | </span>
+            <span class="pipe">toggleCase : isUpperCase</span></code
+          >
+          <b> {{ "toggleCase" | toggleCase : isUpperCase }}</b>
+        </div>
+        <pre><code>
+          transform(value: string, toUpper: boolean = false): string &#123;
+            return ({{ 'toUpper' }})
+              ? value.toUpperCase()
+              : value.toLowerCase();
+          &#125;
+        </code></pre>
       </p-card>
     </div>
   </div>
@@ -44,33 +57,30 @@
       <p-button
         class="mr-2"
         (onClick)="changeOrder('name')"
-        label="Por nombre "
+        label="By name "
         icon="pi pi-sort"
         styleClass="p-button-success"
         pTooltip="(sortBy)"
-
       >
       </p-button>
 
       <p-button
         class="mr-2"
         (onClick)="changeOrder('canFly')"
-        label="Por volar "
+        label="By condition "
         icon="pi pi-sort"
         styleClass="p-button-danger"
         pTooltip="(canFly)"
-
       >
       </p-button>
 
       <p-button
         class="mr-2"
         (onClick)="changeOrder('color')"
-        label="Por color "
+        label="By color "
         icon="pi pi-sort"
         styleClass="p-button-help"
         pTooltip="(colorCase)"
-
       >
       </p-button>
     </div>
@@ -78,15 +88,15 @@
 
   <div class="grid">
     <div class="col mt-2">
-      <p-panel header="Héroes">
+      <p-panel header="Heroes">
         <p-table
           [value]="heroes | sortBy : orderBy"
           [tableStyle]="{ 'min-width': '50rem' }"
         >
           <ng-template pTemplate="header">
             <tr>
-              <th>Nombre</th>
-              <th>Vuela</th>
+              <th>Name</th>
+              <th>Condition</th>
               <th>Color</th>
             </tr>
           </ng-template>
@@ -102,69 +112,127 @@
     </div>
   </div>
 
+
+
+
   <div class="grid">
-    <div class="col-12">
-      <p-card header="sortBy"  subheader="¿Cómo funciona sortBy?">
+    <div class="col-12 md:col-4">
+      <h3>sortBy</h3>
+      <p>Sorts a set of elements in alphabetical order</p>
+    </div>
+
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
         <div>
-          <pre><code>
-            transform( heroes: Hero[], sortBy?: keyof Hero | '' ): Hero[]  &#123;
-            switch( sortBy ) #123;
-
-              case 'name':
-                return heroes.sort( (a,b) => ( a.name > b.name ) ? 1 : -1 );
-
-              case 'canFly':
-                return heroes.sort( (a,b) => ( a.canFly > b.canFly ) ? 1 : -1 );
-
-              case 'color':
-                return heroes.sort( (a,b) => ( a.color > b.color ) ? 1 : -1 );
-
-              default:
-                return heroes;
-                &#125;
-            &#125;
-          </code></pre>
+          <code class="lenguage-typescript">
+            &#123;&#123; [object] | sortBy : orderBy &#125;<span
+            ></span>&#125;
+          </code>
         </div>
+
+        <hr />
+
+        <pre><code>
+          transform( heroes: Hero[], sortBy?: keyof Hero | '' ): Hero[]  &#123;
+              switch( sortBy ) #123;
+
+                case 'name':
+                  return heroes.sort( (a,b) => ( a.name > b.name ) ? 1 : -1 );
+
+                case 'canFly':
+                  return heroes.sort( (a,b) => ( a.canFly > b.canFly ) ? 1 : -1 );
+
+                case 'color':
+                  return heroes.sort( (a,b) => ( a.color > b.color ) ? 1 : -1 );
+
+                default:
+                  return heroes;
+                  &#125;
+              &#125;
+        </code></pre>
       </p-card>
     </div>
 
-    <div class="col-12 ">
-      <p-card header="canFly"  subheader="¿Cómo funciona canFly?">
-        <div>
-          <pre><code>
-            transform( value: boolean ): 'vuela'|'no vuela' &#123;
-            return value ? 'vuela': 'no vuela';
-            &#125;
-          </code></pre>
-        </div>
-      </p-card>
+    <div class="col-12 md:col-4">
+      <h3>canFly</h3>
+      <p>Sorts a set of elements according to a given condition</p>
     </div>
 
-    <div class="col-12 ">
-      <p-card header="colorCase"  subheader="¿Cómo funciona colorCase?">
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
         <div>
-          <pre><code>
-            transform(value: Color): string  &#123;
-            switch (value) &#123;
-              case Color.red:
-                return '0 - Rojo';
-              case Color.black:
-                return '1 - Negro';
-              case Color.blue:
-                return '2 - Azul';
-              case Color.green:
-                return '3 - Verde';
-              default:
-                return value;
-                &#125;
-            &#125;
-          </code></pre>
+          <code class="lenguage-typescript">
+            &#123;&#123; [object] | canFly &#125;<span
+            ></span>&#125;
+          </code>
         </div>
+
+        <hr />
+
+        <pre><code>
+          transform( value: boolean ): 'vuela'|'no vuela' &#123;
+          return value ? 'vuela': 'no vuela';
+          &#125;
+        </code></pre>
       </p-card>
     </div>
 
 
+    <div class="col-12 md:col-4">
+      <h3>colorCase</h3>
+      <p>Sorts a set of elements by color</p>
+    </div>
 
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
+        <div>
+          <code class="lenguage-typescript">
+            &#123;&#123; [object] | colorCase &#125;<span
+            ></span>&#125;
+          </code>
+        </div>
+
+        <hr />
+
+        <pre><code>
+          transform(value: Color): string  &#123;
+          switch (value) &#123;
+            case Color.red:
+              return '0 - Rojo';
+            case Color.black:
+              return '1 - Negro';
+            case Color.blue:
+              return '2 - Azul';
+            case Color.green:
+              return '3 - Verde';
+            default:
+              return value;
+              &#125;
+          &#125;
+        </code></pre>
+      </p-card>
+    </div>
 
   </div>
 </section>

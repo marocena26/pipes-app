@@ -18,24 +18,30 @@ export class OrderComponent {
     },
     {
       name: 'Batman',
+      canFly: true,
+      color: Color.black,
+    },
+    {
+      name: 'Black Canary',
       canFly: false,
       color: Color.black,
     },
     {
-      name: 'Daredevil',
+      name: 'Wonder Woman',
       canFly: false,
       color: Color.red,
     },
     {
       name: 'Robin',
-      canFly: false,
+      canFly: true,
       color: Color.red,
     },
     {
-      name: 'Linterna Verde',
-      canFly: true,
+      name: 'She Hulk',
+      canFly: false,
       color: Color.green,
     },
+
   ]
 
 
