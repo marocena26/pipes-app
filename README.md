@@ -55,7 +55,15 @@ The following tools have been used when solving the project:
 
 ### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Open it in your code editor.
+2. Open a terminal and **install the local dependencies** by executing in the command terminal. Here are the ones I used to start my project:
+
+```bash
+npm install o yarn
+npm install primeng or yarn add primeng
+npm install primeflex or yarn add primeflex
+```
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## ✨ Credits
 
