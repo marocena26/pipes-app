@@ -1,25 +1,14 @@
 @import "../../../../variables.scss";
 
 @mixin primeng-modules() {
-  // -------    ButtonModule   -------
-
-//   .p-button{
-//     // background: #4F46E5;
-//     // color: #ffffff;
-//     // border-color: #4F46E5;
-//     border-radius: 24px;
-// }
-
   // -------    MenuBarModule   -------
   .p-menubar {
     padding: 0.5rem;
-    background: #F8F8FF;
+    background: #f8f8ff;
     color: #4b5563;
     border: 1px solid #e5e7eb;
     border-radius: 0;
-
-
-}
+  }
 
   .p-menubar ul {
     margin-bottom: 0;
