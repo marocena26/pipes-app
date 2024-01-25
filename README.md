@@ -12,6 +12,9 @@ In the attached repository you will find all the challenges, just click [here](h
 
 In this repository you can find the files generated in the **Angular: de cero a experto** within **[Fernando Herrera Udemy](https://www.udemy.com/course/angular-fernando-herrera/)**.
 
+In this repository you will find a small **catalog** in which the **structure and functionality of the pipes** are described. As extra some custom pipes are added, for more information click [here](https://angular.io/api?query=pipe).
+
+
 ## 🛠️ Tools
 
 The following tools have been used when solving the project:
