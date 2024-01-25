@@ -59,7 +59,7 @@ The following tools have been used when solving the project:
 2. Open a terminal and **install the local dependencies** by executing in the command terminal. Here are the ones I used to start my project:
 
 ```bash
-npm install o yarn
+npm install or yarn
 npm install primeng or yarn add primeng
 npm install primeflex or yarn add primeflex
 ```
