@@ -1,38 +1,119 @@
 <section class="container">
-  <p-panel header="Pipes numéricos" class="p-1">
-    <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
-  </p-panel>
+  <div class="header">
+    <h2>Numerical Pipe</h2>
+    <p>Pipes included in Angular - Usually in the CommonModule</p>
+  </div>
 
   <div class="grid">
-    <div class="col-12 md:col-6">
-      <p-card header="DecimalPipe" subheader="Formatea un valor según las opciones de dígitos y las reglas locales">
+    <div class="col-12 md:col-4">
+      <h3>DecimalPipe</h3>
+      <p>
+        Formats a value according to digit options and locale rules. Locale
+        determines group sizing and separator, decimal point character, and
+        other locale-specific configurations.
+      </p>
+    </div>
+
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
+        <div>
+          <code class="lenguage-typescript">
+            &#123;&#123; value_expression | number [ : digitsInfo [ : locale ] ]
+            &#125;<span></span>&#125;
+          </code>
+        </div>
+        <hr />
         <div class="d-flex justify-content-between align-items-center">
-          <p>2567789.5567 | number:'1.2-2'</p>
-          {{ totalSells + 1235 | number : "1.2-2" }}
+          <code
+            ><span class="expression">2567789.5567</span>
+            <span style="color: black"> | </span>
+            <span class="pipe">number:</span>
+            <span class="pipe">'1.2-2'</span>
+          </code>
+          <b> {{ totalSells + 1235 | number : "1.2-2" }}</b>
         </div>
       </p-card>
     </div>
 
-    <div class="col-12 md:col-6">
-      <p-card
-        header="Currency Pipe"
-        subheader="Transforma un número en una cadena de moneda"
-      >
+    <div class="col-12 md:col-4">
+      <h3>CurrencyPipe</h3>
+      <p>
+        Transforms a number to a currency string, formatted according to locale
+        rules that determine group sizing and separator, decimal-point
+        character, and other locale-specific configurations.
+      </p>
+    </div>
+
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
+        <div>
+          <code class="lenguage-typescript">
+            &#123;&#123; value_expression | currency [ : currencyCode [ :
+            display [ : digitsInfo [ : locale ] ] ] ] &#125;<span></span>&#125;
+          </code>
+        </div>
+        <hr />
         <div class="d-flex justify-content-between align-items-center">
-          <p>2567789.5567 | currency:'HNL':'symbol-narrow':'1.4-4'</p>
-          {{ totalSells | currency : "EUR" : "symbol-narrow" : "1.4-4" }}
+          <code
+            ><span class="expression">2567789.5567</span>
+            <span style="color: black"> | </span>
+            <span class="pipe">currency:</span>
+            <span class="pipe">'HNL':'symbol-narrow':'1.4-4'</span>
+          </code>
+          <b>
+            {{ totalSells | currency : "EUR" : "symbol-narrow" : "1.4-4" }}</b
+          >
         </div>
       </p-card>
     </div>
 
-    <div class="col-12 md:col-6">
-      <p-card
-        header="PercentPipe"
-        subheader="Transforma un número en una cadena de porcentaje"
-      >
+    <div class="col-12 md:col-4">
+      <h3>PercentPipe</h3>
+      <p>
+        Transforms a number to a percentage string, formatted according to
+        locale rules that determine group sizing and separator, decimal-point
+        character, and other locale-specific configurations.
+      </p>
+    </div>
+
+    <div class="col-12 md:col-8">
+      <p-card>
+        <ng-template pTemplate="header">
+          <img
+            alt="Card"
+            src="../../../../assets/descarga.svg"
+            class="img-nav"
+          />
+        </ng-template>
+        <div>
+          <code class="lenguage-typescript">
+            &#123;&#123; value_expression | percent [ : digitsInfo [ : locale ]
+            ] &#125;<span></span>&#125;
+          </code>
+        </div>
+        <hr />
         <div class="d-flex justify-content-between align-items-center">
-          <p>0.4856 | percent: '1.2-2'</p>
-          {{ percent | percent : "1.2-2" }}
+          <code
+            ><span class="expression">0.4856 </span>
+            <span style="color: black"> | </span>
+            <span class="pipe">percent:</span>
+            <span class="pipe">'1.2-2'</span>
+          </code>
+          <b> {{ percent | percent : "1.2-2" }}</b>
         </div>
       </p-card>
     </div>
