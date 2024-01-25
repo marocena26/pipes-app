@@ -43,7 +43,7 @@
           >
           <b> {{ "toggleCase" | toggleCase : isUpperCase }}</b>
         </div>
-        <pre><code>
+        <pre><code class="basic">
           transform(value: string, toUpper: boolean = false): string &#123;
             return ({{ 'toUpper' }})
               ? value.toUpperCase()
@@ -54,69 +54,68 @@
     </div>
   </div>
 
-  <p-toolbar>
-    <div class="p-toolbar-group-end">
-      <p-button
-        class="mr-2"
-        (onClick)="changeOrder('name')"
-        label="By name "
-        icon="pi pi-sort"
-        styleClass="p-button-success"
-        pTooltip="(sortBy)"
-        [outlined]="true"
-        [rounded]="true"
-      >
-      </p-button>
-
-      <p-button
-        class="mr-2"
-        (onClick)="changeOrder('canFly')"
-        label="By condition "
-        icon="pi pi-sort"
-        styleClass="p-button-danger"
-        pTooltip="(conditionCase)"
-        [outlined]="true"
-        [rounded]="true"
-      >
-      </p-button>
-
-      <p-button
-        class="mr-2"
-        (onClick)="changeOrder('color')"
-        label="By color "
-        icon="pi pi-sort"
-        styleClass="p-button-help"
-        pTooltip="(colorCase)"
-        [outlined]="true"
-        [rounded]="true"
-      >
-      </p-button>
-    </div>
-  </p-toolbar>
-
-  <div class="grid">
-    <div class="col mt-2">
-      <p-panel header="Heroes">
-        <p-table
-          [value]="heroes | sortBy : orderBy"
-          [tableStyle]="{ 'min-width': '50rem' }"
+  <div style="padding: 24px 0;">
+    <p-toolbar>
+      <div class="p-toolbar-group-end">
+        <p-button
+          class="mr-2"
+          (onClick)="changeOrder('name')"
+          label="By name "
+          icon="pi pi-sort"
+          styleClass="p-button-success"
+          pTooltip="(sortBy)"
+          [outlined]="true"
+          [rounded]="true"
         >
-          <ng-template pTemplate="header">
-            <tr>
-              <th>Name</th>
-              <th>Condition</th>
-              <th>Color</th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-hero>
-            <tr>
-              <td>{{ hero.name }}</td>
-              <td>{{ hero.canFly | conditionCase | titlecase }}</td>
-              <td>{{ hero.color | colorCase }}</td>
-            </tr>
-          </ng-template>
-        </p-table>
-      </p-panel>
+        </p-button>
+        <p-button
+          class="mr-2"
+          (onClick)="changeOrder('canFly')"
+          label="By condition "
+          icon="pi pi-sort"
+          styleClass="p-button-danger"
+          pTooltip="(conditionCase)"
+          [outlined]="true"
+          [rounded]="true"
+        >
+        </p-button>
+        <p-button
+          class="mr-2"
+          (onClick)="changeOrder('color')"
+          label="By color "
+          icon="pi pi-sort"
+          styleClass="p-button-help"
+          pTooltip="(colorCase)"
+          [outlined]="true"
+          [rounded]="true"
+        >
+        </p-button>
+      </div>
+    </p-toolbar>
+    <div class="grid">
+      <div class="col mt-2">
+        <p-panel header="Heroes">
+          <p-table
+            [value]="heroes | sortBy : orderBy"
+            [tableStyle]="{ 'min-width': '50rem' }"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Name</th>
+                <th>Condition</th>
+                <th>Color</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-hero>
+              <tr>
+                <td>{{ hero.name }}</td>
+                <td>{{ hero.canFly | conditionCase | titlecase }}</td>
+                <td>{{ hero.color | colorCase }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </p-panel>
+      </div>
     </div>
   </div>
 
@@ -143,23 +142,24 @@
 
         <hr />
 
-        <pre><code>
-          transform( heroes: Hero[], sortBy?: keyof Hero | '' ): Hero[]  &#123;
-              switch( sortBy ) #123;
+        <pre><code class="basic">
 
-                case 'name':
-                  return heroes.sort( (a,b) => ( a.name > b.name ) ? 1 : -1 );
+          transform(heroes: Hero[], sortBy?: keyof Hero | ''): Hero[] &#123;
+            switch (sortBy) &#123;
+              case 'name':
+                return heroes.sort((a, b) => (a.name > b.name ? 1 : -1));
 
-                case 'canFly':
-                  return heroes.sort( (a,b) => ( a.canFly > b.canFly ) ? 1 : -1 );
+              case 'canFly':
+                return heroes.sort((a, b) => (a.canFly > b.canFly ? 1 : -1));
 
-                case 'color':
-                  return heroes.sort( (a,b) => ( a.color > b.color ) ? 1 : -1 );
+              case 'color':
+                return heroes.sort((a, b) => (a.color > b.color ? 1 : -1));
 
-                default:
-                  return heroes;
-                  &#125;
-              &#125;
+              default:
+                return heroes;
+            &#125;
+          &#125;
+
         </code></pre>
       </p-card>
     </div>
@@ -186,9 +186,9 @@
 
         <hr />
 
-        <pre><code>
+        <pre><code class="basic">
           transform( value: boolean ): 'male'|'female' &#123;
-          return value ? 'male': 'female';
+           return value ? 'male': 'female';
           &#125;
         </code></pre>
       </p-card>
@@ -216,20 +216,20 @@
 
         <hr />
 
-        <pre><code>
-          transform(value: Color): string  &#123;
-          switch (value) &#123;
-            case Color.red:
-              return '0 - Rojo';
-            case Color.black:
-              return '1 - Negro';
-            case Color.blue:
-              return '2 - Azul';
-            case Color.green:
-              return '3 - Verde';
-            default:
-              return value;
-              &#125;
+        <pre><code class="basic">
+          transform(value: Color): string &#123;
+            switch (value) &#123;
+              case Color.red:
+                return '0 - Red';
+              case Color.black:
+                return '1 - Black';
+              case Color.blue:
+                return '2 - Blue';
+              case Color.green:
+                return '3 - Green';
+              default:
+                return value;
+            &#125;
           &#125;
         </code></pre>
       </p-card>

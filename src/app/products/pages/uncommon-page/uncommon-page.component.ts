@@ -11,8 +11,8 @@ export class UncommonPageComponent {
   public name: string = 'Fernando';
   public gender: 'male' | 'female' = 'male';
   public invitationMap = {
-    male: 'invitarlo',
-    female: 'invitarla',
+    male: 'him ',
+    female: 'her ',
   };
 
   changeClient(): void {

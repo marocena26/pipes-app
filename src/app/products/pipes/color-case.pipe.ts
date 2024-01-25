@@ -6,7 +6,6 @@ import { Color } from '../interfaces/hero';
   standalone: true,
 })
 export class ColorCasePipe implements PipeTransform {
-
   transform(value: Color): string {
     switch (value) {
       case Color.red:
@@ -21,5 +20,4 @@ export class ColorCasePipe implements PipeTransform {
         return value;
     }
   }
-
 }

@@ -31,7 +31,7 @@
             <span style="color: black"> | </span>
             <span class="pipe">uppercase</span></code
           >
-          <b>{{ nameLower | uppercase }}</b>
+          <p style="color: black"><b>{{ nameLower | uppercase }}</b></p>
         </div>
       </p-card>
     </div>
@@ -62,7 +62,9 @@
             <span style="color: black"> | </span>
             <span class="pipe">lowercase</span></code
           >
-          <b>{{ nameUpper | lowercase }}</b>
+          <p style="color: black"><b>{{ nameUpper | lowercase }}</b></p>
+
+
         </div>
       </p-card>
     </div>
@@ -98,7 +100,9 @@
             <span style="color: black"> | </span>
             <span class="pipe">titlecase</span></code
           >
-          <b>{{ fullName | titlecase }}</b>
+          <p style="color: black"><b>{{ fullName | titlecase }}</b></p>
+
+
         </div>
       </p-card>
     </div>
@@ -118,101 +122,101 @@
           />
         </ng-template>
         <code>
-          <ol>
+          <ul>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span class="comment">// {{ customDate }}</span>
+              <span class="expression">value_expression</span>
+              <span class="comment"> // {{ customDate }}</span>
             </li>
 
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date</span>
-              <span class="comment">// {{ customDate | date }}</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date</span>
+              <span class="comment"> // {{ customDate | date }}</span>
             </li>
 
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
-              <span class="type">'short'</span>
-              <span class="comment">// {{ customDate | date : "short" }}</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
+              <span class="type">'short' </span>
+              <span class="comment"> // {{ customDate | date : "short" }}</span>
             </li>
 
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long'</span>
-              <span class="comment">// {{ customDate | date : "long" }}</span>
+              <span class="comment"> // {{ customDate | date : "long" }}</span>
             </li>
 
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'MMMM'</span>
-              <span class="comment">// {{ customDate | date : "MMMM" }}</span>
+              <span class="comment"> // {{ customDate | date : "MMMM" }}</span>
             </li>
 
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'MMMM dd, yyyy'</span>
               <span class="comment"
-                >// {{ customDate | date : "MMMM dd, yyyy" }}</span
+                > // {{ customDate | date : "MMMM dd, yyyy" }}</span
               >
             </li>
-          </ol>
+          </ul>
           <hr />
-          <ol>
+          <ul>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long':'GMT-6'</span>
               <span class="comment"
-                >// {{ customDate | date : "long" : "GMT-6" }}</span
+                > // {{ customDate | date : "long" : "GMT-6" }}</span
               >
             </li>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long':'GMT-4'</span>
               <span class="comment"
-                >// {{ customDate | date : "long" : "GMT-4" }}</span
+                > // {{ customDate | date : "long" : "GMT-4" }}</span
               >
             </li>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long':'':'es'</span>
               <span class="comment"
-                >// {{ customDate | date : "long" : "" : "es" }}</span
+                > // {{ customDate | date : "long" : "" : "es" }}</span
               >
             </li>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long':'':'en-US'</span>
               <span class="comment"
-                >// {{ customDate | date : "long" : "" : "en-US" }}</span
+                > // {{ customDate | date : "long" : "" : "en-US" }}</span
               >
             </li>
             <li>
-              <span class="lenguage-typescript">value_expression</span>
-              <span style="color: black">|</span>
-              <span class="expression">date:</span>
+              <span class="expression">value_expression</span>
+              <span style="color: black"> | </span>
+              <span class="pipe">date:</span>
               <span class="type">'long':'':'fr'</span>
               <span class="comment"
-                >// {{ customDate | date : "long" : "" : "fr" }}</span
+                > // {{ customDate | date : "long" : "" : "fr" }}</span
               >
             </li>
-          </ol>
+          </ul>
         </code>
       </p-card>
     </div>
