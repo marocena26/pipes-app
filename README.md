@@ -14,6 +14,8 @@ In this repository you can find the files generated in the **Angular: de cero a 
 
 In this repository you will find a small **catalog** in which the **structure and functionality of the pipes** are described. As extra some custom pipes are added, for more information click [here](https://angular.io/api?query=pipe).
 
+> **NOTE:** Direct link to the project by clicking on the following **[link](https://pipe-catalogue.netlify.app/)**
+
 
 ## 🛠️ Tools
 
