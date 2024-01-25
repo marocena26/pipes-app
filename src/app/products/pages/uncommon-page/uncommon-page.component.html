@@ -38,24 +38,22 @@
           </code>
         </div>
         <hr />
-        <div class="d-flex justify-content-between align-items-center">
-          <code class="basic">
-            Welcome
-            &#123;&#123;
+        <div class="d-flex justify-content-between align-items-start">
+          <code class="basic" style="max-width: 64ch">
+            What do you hear? It's a &#123;&#123;
             <span class="expression">name</span>
-            &#125;<span></span>&#125;
-            , it is a pleasure to invite
+            &#125;<span></span>&#125;, it's
             <span>&#123;&#123;</span>
-            <span class="expression">gender</span>
-             |
-            <span class="pipe">i18nSelect : invitationMap</span>
-            &#125;<span></span>&#125;to our event.</code
+            <span class="expression">sound</span>
+            |
+            <span class="pipe">i18nSelect : soundMap</span>
+            &#125;<span></span>&#125;.</code
           >
           <p>
-            Welcome <b class="expression">{{ name }}</b
-            >, it is a pleasure to invite
-            <b class="expression">{{ gender | i18nSelect : invitationMap }}</b>
-            to our event.
+            What do you hear? It's a
+            <b class="expression">{{ name }}</b
+            >, it's
+            <b class="expression">{{ sound | i18nSelect : soundMap }}</b>
           </p>
         </div>
       </p-card>
@@ -95,11 +93,18 @@
         <hr />
         <div class="d-flex justify-content-between align-items-center">
           <code class="basic"
-            >We currently &#123;&#123; <span class="expression">clients.length</span>
-             |
-           <span class="pipe">i18nPlural : clientsMap</span> &#125;<span></span>&#125;</code
+            >We currently &#123;&#123;
+            <span class="expression">clients.length</span>
+            |
+            <span class="pipe">i18nPlural : clientsMap</span> &#125;<span
+            ></span>&#125;</code
           >
-          <p>We currently <b class="expression">{{ clients.length | i18nPlural : clientsMap }}</b></p>
+          <p>
+            We currently
+            <b class="expression">{{
+              clients.length | i18nPlural : clientsMap
+            }}</b>
+          </p>
         </div>
       </p-card>
     </div>
@@ -320,7 +325,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="col-3">
               <p>
-                Resolving observable:
+                <b>Resolving observable:</b>
                 <span>{{ myObservableTimer | async }}</span>
               </p>
             </div>
@@ -340,7 +345,8 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="col-3">
               <p>
-                Resolving promise: <span>{{ promiseValue | async }}</span>
+                <b>Resolving promise:</b>
+                <span>{{ promiseValue | async }}</span>
               </p>
             </div>
             <div class="col-9">

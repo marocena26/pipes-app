@@ -8,16 +8,16 @@ import { Observable, interval, tap } from 'rxjs';
 })
 export class UncommonPageComponent {
   // i18n Select
-  public name: string = 'Fernando';
-  public gender: 'male' | 'female' = 'male';
-  public invitationMap = {
-    male: 'him ',
-    female: 'her ',
+  public name: string = 'cat';
+  public sound: 'catSound' | 'dogSound' = 'catSound';
+  public soundMap = {
+    catSound: 'meowing',
+    dogSound: 'barking',
   };
 
   changeClient(): void {
-    this.name = 'Melissa';
-    this.gender = 'female';
+    this.name = 'dog';
+    this.sound = 'dogSound';
   }
 
   // i18nPlural
