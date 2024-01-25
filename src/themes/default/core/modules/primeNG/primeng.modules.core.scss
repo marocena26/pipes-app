@@ -4,8 +4,8 @@
   // -------    ButtonModule   -------
 
   .p-menubar ul {
-   margin-bottom: 0;
-}
+    margin-bottom: 0;
+  }
 
   .p-menubar
     .p-menubar-root-list
@@ -23,6 +23,13 @@
   }
   .p-menubar .p-submenu-list {
     padding: 12px 0;
+  }
 
+  // -------    FieldsetModule   -------
+
+  .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 }

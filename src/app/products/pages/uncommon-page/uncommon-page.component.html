@@ -1,1 +1,123 @@
-<p>uncommon-page works!</p>
+<section class="container">
+  <p-panel header="Pipes no tan comunes" class="p-1">
+    <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+  </p-panel>
+
+  <div class="grid">
+    <div class="col-12 md:col-12">
+      <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+        <p>
+          Selector genérico que muestra la cadena que coincide con el valor
+          actual.
+        </p>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <p>
+            Saludos &#123;&#123; name &#125;<span></span>&#125; , es un placer
+            &#123;&#123; gender | i18nSelect : invitationMap &#125;<span
+            ></span>&#125; a nuestro evento.
+          </p>
+          <p>
+            Saludos <b>{{ name }}</b
+            >, es un placer
+            <b>{{ gender | i18nSelect : invitationMap }}</b>
+            a nuestro evento.
+          </p>
+        </div>
+
+        <p-button (click)="changeClient()" label="Cambiar persona"></p-button>
+      </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-12">
+      <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+        <p>
+          Asigna un valor a una cadena que pluraliza el valor según las reglas
+          locales.
+        </p>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <p>
+            Actualmente &#123;&#123; clients.length | i18nPlural : clientsMap
+            &#125;<span></span>&#125;
+          </p>
+
+          <p>Actualmente {{ clients.length | i18nPlural : clientsMap }}</p>
+        </div>
+
+        <p-button (click)="deleteClient()" label="Borrar cliente"></p-button>
+      </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-fieldset legend="Slice Pipe" [toggleable]="true">
+        <p>
+          Crea un subconjunto nuevo Arrayo Stringque contiene un subconjunto
+          (porción) de elementos. &#123;&#123;value_expression | slice : start [
+          : end ] &#125;<span></span>&#125;
+        </p>
+        <b>Original</b>
+        <pre>{{ clients }}</pre>
+
+        <b>slice:0:2</b>
+        <pre>{{ clients | slice : 0 : 2 }}</pre>
+
+        <b>slice:1:2</b>
+        <pre>{{ clients | slice : 1 : 2 }}</pre>
+
+        <b>slice:1:3</b>
+        <pre>{{ clients | slice : 1 : 3 }}</pre>
+
+        <b>slice:3:4</b>
+        <pre>{{ clients | slice : 3 : 4 }}</pre>
+
+        <b>slice:0:-3</b>
+        <pre>{{ clients | slice : 0 : -3 }}</pre>
+      </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-fieldset legend="Json Pipe" [toggleable]="true">
+        <p>
+          Convierte un valor en su representación en formato JSON. Útil para
+          depurar. &#123;&#123;value_expression | json &#125;<span></span>&#125;
+        </p>
+        <pre>{{ person | json }}</pre>
+      </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+        <p>
+          Transforms Object or Map into an array of key value pairs.
+
+ &#123;&#123;input_expression | keyvalue [ : compareFn ] &#125;<span></span>&#125;
+        </p>
+
+        <ul>
+          <li *ngFor="let item of person | keyvalue">
+            <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+          </li>
+        </ul>
+      </p-fieldset>
+    </div>
+
+    <div class="col-12 md:col-6">
+      <p-fieldset legend="Async Pipe" [toggleable]="true">
+        <p>
+          Unwraps a value from an asynchronous primitive.
+
+
+
+ &#123;&#123; obj_expression | async &#125;<span></span>&#125;
+        </p>
+
+        <pre *ngIf="!(myObservableTimer | async)">Resolviendo observable</pre>
+        <pre>{{ myObservableTimer | async }}</pre>
+
+        <pre *ngIf="!(promiseValue | async)">Resolviendo promesa</pre>
+        <pre>{{ promiseValue | async }}</pre>
+      </p-fieldset>
+    </div>
+  </div>
+</section>
