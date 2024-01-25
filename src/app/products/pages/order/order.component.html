@@ -12,7 +12,9 @@
         label="ToggleCase"
         icon="pi pi-refresh"
         (click)="toggleUpperCase()"
-        pTooltip="Try to toggle!"
+        [outlined]="true"
+        [rounded]="true"
+        [style]="{marginTop: '12px'}"
       ></p-button>
     </div>
 
@@ -61,6 +63,8 @@
         icon="pi pi-sort"
         styleClass="p-button-success"
         pTooltip="(sortBy)"
+        [outlined]="true"
+        [rounded]="true"
       >
       </p-button>
 
@@ -70,7 +74,9 @@
         label="By condition "
         icon="pi pi-sort"
         styleClass="p-button-danger"
-        pTooltip="(canFly)"
+        pTooltip="(conditionCase)"
+        [outlined]="true"
+        [rounded]="true"
       >
       </p-button>
 
@@ -81,6 +87,8 @@
         icon="pi pi-sort"
         styleClass="p-button-help"
         pTooltip="(colorCase)"
+        [outlined]="true"
+        [rounded]="true"
       >
       </p-button>
     </div>
@@ -103,7 +111,7 @@
           <ng-template pTemplate="body" let-hero>
             <tr>
               <td>{{ hero.name }}</td>
-              <td>{{ hero.canFly | canFly | titlecase }}</td>
+              <td>{{ hero.canFly | conditionCase | titlecase }}</td>
               <td>{{ hero.color | colorCase }}</td>
             </tr>
           </ng-template>
@@ -111,9 +119,6 @@
       </p-panel>
     </div>
   </div>
-
-
-
 
   <div class="grid">
     <div class="col-12 md:col-4">
@@ -132,8 +137,7 @@
         </ng-template>
         <div>
           <code class="lenguage-typescript">
-            &#123;&#123; [object] | sortBy : orderBy &#125;<span
-            ></span>&#125;
+            &#123;&#123; [object] | sortBy : orderBy &#125;<span></span>&#125;
           </code>
         </div>
 
@@ -161,7 +165,7 @@
     </div>
 
     <div class="col-12 md:col-4">
-      <h3>canFly</h3>
+      <h3>conditionCase</h3>
       <p>Sorts a set of elements according to a given condition</p>
     </div>
 
@@ -176,21 +180,19 @@
         </ng-template>
         <div>
           <code class="lenguage-typescript">
-            &#123;&#123; [object] | canFly &#125;<span
-            ></span>&#125;
+            &#123;&#123; [object] | conditionCase &#125;<span></span>&#125;
           </code>
         </div>
 
         <hr />
 
         <pre><code>
-          transform( value: boolean ): 'vuela'|'no vuela' &#123;
-          return value ? 'vuela': 'no vuela';
+          transform( value: boolean ): 'male'|'female' &#123;
+          return value ? 'male': 'female';
           &#125;
         </code></pre>
       </p-card>
     </div>
-
 
     <div class="col-12 md:col-4">
       <h3>colorCase</h3>
@@ -208,8 +210,7 @@
         </ng-template>
         <div>
           <code class="lenguage-typescript">
-            &#123;&#123; [object] | colorCase &#125;<span
-            ></span>&#125;
+            &#123;&#123; [object] | colorCase &#125;<span></span>&#125;
           </code>
         </div>
 
@@ -233,6 +234,5 @@
         </code></pre>
       </p-card>
     </div>
-
   </div>
 </section>

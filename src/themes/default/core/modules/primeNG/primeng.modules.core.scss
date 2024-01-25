@@ -3,6 +3,16 @@
 @mixin primeng-modules() {
   // -------    ButtonModule   -------
 
+//   .p-button{
+//     // background: #4F46E5;
+//     // color: #ffffff;
+//     // border-color: #4F46E5;
+//     border-radius: 24px;
+// }
+
+  // -------    MenuBarModule   -------
+
+
   .p-menubar ul {
     margin-bottom: 0;
   }
@@ -31,5 +41,5 @@
     text-decoration: none;
     color: black;
     font-size: 14px;
-}
+  }
 }

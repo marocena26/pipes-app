@@ -4,7 +4,7 @@ import { Color, Hero } from '../../interfaces/hero';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.scss']
+  styleUrls: ['./order.component.scss'],
 })
 export class OrderComponent {
   public isUpperCase: boolean = false;
@@ -41,16 +41,13 @@ export class OrderComponent {
       canFly: false,
       color: Color.green,
     },
+  ];
 
-  ]
-
-
-  toggleUpperCase():void {
+  toggleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
   }
 
-  changeOrder( value: keyof Hero ){
+  changeOrder(value: keyof Hero) {
     this.orderBy = value;
   }
-
 }

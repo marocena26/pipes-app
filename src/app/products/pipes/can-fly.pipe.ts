@@ -1,6 +1,6 @@
 import { Pipe, type PipeTransform } from '@angular/core';
 @Pipe({
-  name: 'canFly'
+  name: 'conditionCase'
 })
 
 export class CanFlyPipe implements PipeTransform {

@@ -13,7 +13,9 @@
         Generic selector that displays the string that matches the current
         value.
       </p>
-      <p-button (click)="changeClient()" label="Cambiar persona"></p-button>
+      <p-button (click)="changeClient()" label="i18nSelect"  [outlined]="true"
+        [style]="{marginTop: '12px'}"
+        [rounded]="true" ></p-button>
     </div>
 
     <div class="col-12 md:col-8">
@@ -61,7 +63,9 @@
         Maps a value to a string that pluralizes the value according to locale
         rules.
       </p>
-      <p-button (click)="deleteClient()" label="Borrar cliente"></p-button>
+      <p-button (click)="deleteClient()" label="i18nPlural" [outlined]="true"
+        [style]="{marginTop: '12px'}"
+        [rounded]="true" ></p-button>
     </div>
 
     <div class="col-12 md:col-8">
